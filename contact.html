@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Contact Page Header -->
+    <header class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Feel free to get in touch with us for any inquiries, suggestions, or feedback.</p>
+        <div class="back-button-container">
+            <button class="back-button" onclick="goBack()"> <a href="index.html">Back to Home</a></button>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+     
+    <section class="contact-form-section">
+        <h2><i class="fas fa-envelope"></i> Get in Touch</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message"><i class="fas fa-comment"></i> Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <h2><i class="fas fa-address-book"></i> Contact Information</h2>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> BBSR ,ODISHA </p>
+        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 77359 09354   </p>
+        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 77358 47678  </p>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> tourandtravel150924@gmail.com</p>
+    </section>
+
+    <!-- Social Media Links Section -->
+    <section class="social-media-section">
+        <h2>Connect With Us</h2>
+        <div class="social-icons">
+            
+            <a href="XX"><i class="fab fa-twitter"></i></a>
+            <a href="XX"><i class="fab fa-instagram"></i></a>
+            <a href="XX"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </section>
+
+    <!-- Map Section (Optional) -->
+    <section class="map-section">
+        <h2><i class="fas fa-map-marked-alt"></i> Find Us Here</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.438573407012!2d144.9630583156205!3d-37.813627979751536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727a69a7c3ff23!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1611602344514!5m2!1sen!2sau"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Contact Page Header */
+.contact-header {
+    background-color: #6b8e23; /* Olive green for Ayurveda theme */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in-out; /* Animation */
+}
+
+.contact-header h1 {
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+}
+
+.contact-form-section h2 {
+    margin-bottom: 20px;
+    color: #6b8e23;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #6b8e23;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button[type="submit"]:hover {
+    background-color: #556b2f; /* Darker shade */
+}
+
+/* Contact Information Section */
+.contact-info-section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    text-align: center; /* Center align */
+}
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color:#82b124;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e67e22;
+}
+
+.contact-info-section h2 {
+    margin-bottom: 20px;
+    color: #6b8e23;
+}
+
+.contact-info-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Social Media Section */
+.social-media-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.social-media-section h2 {
+    margin-bottom: 20px;
+    color: #6b8e23;
+}
+
+.social-icons a {
+    color: #121212;
+    font-size: 30px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color:#6b8e23;
+}
+
+/* Map Section */
+.map-section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+    text-align: center;
+}
+
+.map-section h2 {
+    margin-bottom: 20px;
+    color: #6b8e23;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6b8e23;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #556b2f;
+}
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card {
+        width: 90%;
+    }
+
+    .details-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form-section, .contact-info-section, .map-section {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+</style>
+<script>
+    // Form submission handler
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // For demonstration purposes, we'll just alert the values
+    alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+    // Clear form fields after submission
+    document.getElementById('contactForm').reset();
+});
+
+// Back to Top Button
+const backToTopButton = document.getElementById('backToTop');
+
+// Show/Hide Back to Top Button on Scroll
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
+
+// Scroll to Top on Button Click
+backToTopButton.addEventListener('click', function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+});
+
+</script>
