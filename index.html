@@ -16,12 +16,19 @@
         <a href="contact.html"><h4>Contact Us </h4></a>
         <a href="http://"><h4>States </h4></a>
       </header>
+
+      <div class="slideshow">
+        <div class="slide"><img src="lawless-capture-RnKwXJip26M-unsplash.jpg" alt="Image 1"></div>
+        <div class="slide"><img src="laura-lugaresi-SQJjtt68XKk-unsplash.jpg" alt="Image 2"></div>
+        <div class="slide"><img src="mario-alvarez-M1YdS0g8SRA-unsplash.jpg" alt="Image 3"></div>
+        <div class="slide"><img src="le-sixieme-reve-AAb6F-Ph6rs-unsplash.jpg" alt="Image 4"></div>
+        <div class="slide"><img src="ouael-ben-salah-Sd88gPoRBLc-unsplash.jpg" alt="Image 5"></div>
+      </div>
+    
      <div id="page1">
-      <div class="video-container">
-        <video autoplay muted loop class="video-background">
-          <source src="Untitled video - Made with Clipchamp (1) (1).mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+     
+     
+     
         <div class="video-text"> <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Text Moves and Stays</title> <div class="animated-text">Hello, TOURIST!</div>
@@ -54,21 +61,101 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
-
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full viewport height */
+img{
+  object-fit: cover;
+  height: 700px;
+  width: 1400px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
+body, html {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the video covers the entire area */
+  overflow: hidden;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111; /* Dark background */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomEffect 15s ease-in-out infinite;
+}
+
+/* Keyframes for the zoom-in and zoom-out effect */
+@keyframes zoomEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); } /* Zoom in more for a stronger effect */
+  100% { transform: scale(1); } /* Zoom out */
+}
+
+/* Keyframes to fade each slide */
+@keyframes slideAnimation {
+  0% { opacity: 1; }
+  20% { opacity: 1; }
+  25% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Animation delays for each slide to control timing */
+.slide:nth-child(1) {
+  animation: slideAnimation 25s infinite;
+}
+
+.slide:nth-child(2) {
+  animation: slideAnimation 25s infinite;
+  animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+  animation: slideAnimation 25s infinite;
+  animation-delay: 10s;
+}
+
+.slide:nth-child(4) {
+  animation: slideAnimation 25s infinite;
+  animation-delay: 15s;
+}
+
+.slide:nth-child(5) {
+  animation: slideAnimation 25s infinite;
+  animation-delay: 20s;
+}
+
+
 
 .video-text {
   position: absolute;
@@ -142,7 +229,15 @@ h1{
       padding: 8px 10px; /* Adjust padding for smaller screens */
   }
 
- 
+  .slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1300px;
+  width: 860px;
+  background-color: #111; /* Dark background */
+  overflow: hidden;
+}
 
   .video-text {
       font-size: 24px; /* Reduce font size of video overlay text */
@@ -183,5 +278,14 @@ h1{
       letter-spacing: 2px;
       margin-left: 380px;
   }
+  .slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1670px;
+  width: 800px;
+  background-color: #111; /* Dark background */
+  overflow: hidden;
+}
 }
 </style>
