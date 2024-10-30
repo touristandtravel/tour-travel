@@ -8,14 +8,17 @@
 </head>
 <body>
       <header id="navbar">
+        <h1>TOUR & TRAVELS</h1>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <ul class="nav-links" id="nav-links">
         <a href="http://"><h4>Travel & Explore</h4></a>
         <a href="http://"><h4>Destinations </h4></a>
-        <a href="http://"><h4>Tours </h4></a>
-        <h1>TOUR & TRAVELS</h1>
+        <a href="tour.html"><h4>Tours </h4></a>
         <a href="http://"><h4>About Us </h4></a>
         <a href="contact.html"><h4>Contact Us </h4></a>
         <a href="http://"><h4>States </h4></a>
-      </header>
+      </ul>
+    </header>
 
       <div class="slideshow">
         <div class="slide"><img src="lawless-capture-RnKwXJip26M-unsplash.jpg" alt="Image 1"></div>
@@ -36,7 +39,9 @@
       </div>
       
      </div>
-     
+
+     <script src="script.js"></script>
+
 </body>
 
 </html>
@@ -184,6 +189,46 @@ body, html {
     height: 50px;
     text-decoration: none;
 }  
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #333;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
 a{
    
   color: white;
@@ -252,22 +297,11 @@ h1{
 
 /* Mobile View (Max-width: 480px) */
 @media (max-width: 480px) {
-  #navbar {
-      flex-direction: column; /* Stack the navbar items vertically */
-      height: auto;
+      .navbar{
+        height: 700px;
+      }
 
-  }
-
-  #navbar a {
-      font-size: 1em; /* Smaller text */
-      padding: 5px 10px; /* Less padding */
-      text-align: center; 
-      margin-right: 10px;
-      /* Center links */
-  }
-   h1{
-    margin-right: 40px;
-   }
+ 
   .video-text {
       font-size: 20px; /* Smaller font size for mobile */
   }
@@ -288,4 +322,43 @@ h1{
   overflow: hidden;
 }
 }
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block; 
+    ;/* Show toggle button on mobile */
+  }
+  .navbar{
+    height: 300px;
+  }
+  .nav-links {
+    display: none;  /* Hide nav links by default */
+    position: absolute;
+    top: 60px;     /* Positioning under the navbar */
+    right: 0;
+    width: 100%;   /* Full width */
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;  /* Show links when active */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
 </style>
+<script>
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active"); // Toggle the 'active' class
+  });
+  
+</script>
