@@ -1,364 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour & travel</title>
+  <link rel="stylesheet" href="digital.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-      <header id="navbar">
-        <h1>TOUR & TRAVELS</h1>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-        <ul class="nav-links" id="nav-links">
-        <a href="http://"><h4>Travel & Explore</h4></a>
-        <a href="http://"><h4>Destinations </h4></a>
-        <a href="tour.html"><h4>Tours </h4></a>
-        <a href="http://"><h4>About Us </h4></a>
-        <a href="contact.html"><h4>Contact Us </h4></a>
-        <a href="http://"><h4>States </h4></a>
-      </ul>
-    </header>
 
-      <div class="slideshow">
-        <div class="slide"><img src="lawless-capture-RnKwXJip26M-unsplash.jpg" alt="Image 1"></div>
-        <div class="slide"><img src="laura-lugaresi-SQJjtt68XKk-unsplash.jpg" alt="Image 2"></div>
-        <div class="slide"><img src="mario-alvarez-M1YdS0g8SRA-unsplash.jpg" alt="Image 3"></div>
-        <div class="slide"><img src="le-sixieme-reve-AAb6F-Ph6rs-unsplash.jpg" alt="Image 4"></div>
-        <div class="slide"><img src="ouael-ben-salah-Sd88gPoRBLc-unsplash.jpg" alt="Image 5"></div>
-      </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>TOUR AND TRAVEL</h1>
     
-     <div id="page1">
-     
-     
-     
-        <div class="video-text"> <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Text Moves and Stays</title> <div class="animated-text">Hello, TOURIST!</div>
-        </div>
+    <div class="search-container">
+      <input type="text" placeholder="Search destinations, tours, and experiences..." />
+      <button type="submit">Search</button>
+    </div>
+   
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="mobile-search-container">
+        <input type="text" placeholder="Search destinations..." />
+        <button type="submit">🔍</button> <!-- Search icon as button -->
       </div>
+      <h2>Find Your Perfect Odisha Getaway</h2>
       
-     </div>
+      <p>Explore Odisha’s Diverse Destinations – A Land of Art, Spirituality, and Natural Beauty</p>
+      
+      <a href="tour.html" class="btn">TOUR</a>
+    
+      <a href="contact.html" class="btn">Contact Us</a>
+      <a href="" class="btn">About</a>
+    </div>
+  </section> 
 
-     <script src="script.js"></script>
 
+ 
+
+ 
+  <script src="script.js"></script>
 </body>
-
 </html>
-
 <style>
-  *{
-    margin: 0%;
-    padding: 0%;
-}
-html, body {
+  * {
     margin: 0;
     padding: 0;
-    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 80px;
+    padding: 1rem;
+    position: fixed;
     width: 100%;
+    justify-content: center; /* Centering the logo horizontally */
+  align-items: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .mobile-search-container{
+    display: none;
+  }
+  .search-container {
+    width: 80%; /* Adjusts the width of the search bar */
+    max-width: 600px;
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Input field styling */
+  .search-container input[type="text"] {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px; /* Rounded corners */
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .search-container input[type="text"]:focus {
+    box-shadow: 0 0 5px rgba(0, 101, 255, 0.5); /* Highlight on focus */
+  }
+
+  /* Search button styling */
+  .search-container button {
+    background-color: #007bff; /* Button color */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0 30px 30px 0; /* Rounded corners */
+    transition: background-color 0.3s ease;
+  }
+
+  .search-container button:hover {
+    background-color: #0056b3; /* Darken button on hover */
+  }
+ h1{
+  justify-content: center; /* Centering the logo horizontally */
+  align-items: center;
+  font-size:xx-large;
+  
+ }
+ 
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("pexels-tanmoy-pal-3640736-27023262.jpg") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    position: relative;
     overflow: hidden;
   }
   
-/* Make the video and container full screen */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-img{
-  object-fit: cover;
-  height: 700px;
-  width: 1400px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.slideshow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #111; /* Dark background */
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: zoomEffect 15s ease-in-out infinite;
-}
-
-/* Keyframes for the zoom-in and zoom-out effect */
-@keyframes zoomEffect {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); } /* Zoom in more for a stronger effect */
-  100% { transform: scale(1); } /* Zoom out */
-}
-
-/* Keyframes to fade each slide */
-@keyframes slideAnimation {
-  0% { opacity: 1; }
-  20% { opacity: 1; }
-  25% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* Animation delays for each slide to control timing */
-.slide:nth-child(1) {
-  animation: slideAnimation 25s infinite;
-}
-
-.slide:nth-child(2) {
-  animation: slideAnimation 25s infinite;
-  animation-delay: 5s;
-}
-
-.slide:nth-child(3) {
-  animation: slideAnimation 25s infinite;
-  animation-delay: 10s;
-}
-
-.slide:nth-child(4) {
-  animation: slideAnimation 25s infinite;
-  animation-delay: 15s;
-}
-
-.slide:nth-child(5) {
-  animation: slideAnimation 25s infinite;
-  animation-delay: 20s;
-}
-
-
-
-.video-text {
-  position: absolute;
-  top: 20px; /* Adjust to move the text further down or up */
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 32px; /* Increase font size for better visibility */
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  z-index: 1; /* Ensure the text stays on top of the video */
-}
-
-#navbar{
-      display: flex;
-      position: fixed; /* Stick to the top */
-      top: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
-      padding: 20px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000; 
-    height: 50px;
-    text-decoration: none;
-}  
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #333;
-}
-
-.brand {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5em;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li {
-  margin: 0;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-}
-
-/* Menu Toggle Button */
-.menu-toggle {
-  display: none; /* Hidden by default */
-  font-size: 1.5em;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-a{
-   
-  color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    text-decoration: none;
-    justify-items: center; 
-    
-}
-a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Add a hover effect */
-}
-h1{
-    color: white;
-}
-.animated-text {
-  font-size: 4em;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  position: relative;
-  margin-top: 150px;
-  margin-right: 400px;
-  animation: moveRight 3s ease-out forwards;
-}
-
-@keyframes moveRight {
-  0% {
-    transform: translateX(-100vw); /* Starts off-screen to the left */
-  }
-  100% {
-    transform: translateX(0); /* Moves to its original position */
-  }
-}
-
-
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-  #navbar a {
-      font-size: 1.2em; /* Slightly larger text for readability */
-      padding: 8px 10px; /* Adjust padding for smaller screens */
-  }
-
-  .slideshow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 1300px;
-  width: 860px;
-  background-color: #111; /* Dark background */
-  overflow: hidden;
-}
-
-  .video-text {
-      font-size: 24px; /* Reduce font size of video overlay text */
-  }
-  .animated-text {
-    font-size: 3em;  /* Even smaller text for mobile */
-    margin-top: 400px; /* Adjust vertical margin */
-    letter-spacing: 2px;
-    margin-left: 150px;
-}
-}
-
-/* Mobile View (Max-width: 480px) */
-@media (max-width: 480px) {
-      .navbar{
-        height: 700px;
-      }
-
- 
-  .video-text {
-      font-size: 20px; /* Smaller font size for mobile */
-  }
-
-  .animated-text {
-      font-size: 3em;  /* Even smaller text for mobile */
-      margin-top: 400px; /* Adjust vertical margin */
-      letter-spacing: 2px;
-      margin-left: 380px;
-  }
-  .slideshow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 1670px;
-  width: 800px;
-  background-color: #111; /* Dark background */
-  overflow: hidden;
-}
-}
-
-@media (max-width: 600px) {
-  .menu-toggle {
-    display: block; 
-    ;/* Show toggle button on mobile */
-  }
-  .navbar{
-    height: 300px;
-  }
-  .nav-links {
-    display: none;  /* Hide nav links by default */
+  .hero::before {
+    content: '';
     position: absolute;
-    top: 60px;     /* Positioning under the navbar */
+    top: 0;
+    left: 0;
     right: 0;
-    width: 100%;   /* Full width */
-    background-color: #333;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
-
-  .nav-links.active {
-    display: flex;  /* Show links when active */
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
   }
-
-  .nav-links li {
-    width: 100%;
+  
+  .hero h2 {
+    font-size: 3rem;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  /* About Section */
+  .about {
+    padding: 100px 20px;
     text-align: center;
-    padding: 10px 0;
+    background-color: #f9f9f9;
   }
-}
+  
+  .about h2 {
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  /* Contact Section */
+  .contact {
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .contact form {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .contact input, .contact textarea, .contact button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .contact button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .receive button {
+    background-color: #4CAF50;
+    height: 40px;
+    width: 500px; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 80px;
+  }
+  
+  a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    /* Show the menu toggle button */
+   .navbar h1{
+    font-size: x-large;
+    margin-left: 70px;
+   }
+   
+   .mobile-search-container {
+     /* Hidden by default */
+    width: 90%;
+    margin-left: 20px;
+    margin-bottom: 80px; /* Full width on mobile */
+    max-width: 400px; /* Maximum width */
+    background: #ffffff; /* White background for the search bar */
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Input field styling */
+  .mobile-search-container input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 15px 50px 15px 20px; /* Padding with space for icon */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1rem;
+    outline: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Search button styling */
+  .mobile-search-container button {
+    position: absolute; /* Positioning relative to the container */
+    right: 5px; /* Right alignment */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    background-color: #007bff; /* Button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .mobile-search-container button:hover {
+    background-color: #0056b3; /* Darken button on hover */
+  }
+
+  /* Media query to show mobile search box only on small screens */
+  @media (max-width: 768px) {
+    .mobile-search-container {
+      display: flex; /* Show the search container */
+    }
+  }
+  
+   .search-container{
+    display: none;
+   }
+   
+    /* Hide the nav-links by default */
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+    .receive button {
+      background-color: #4CAF50;
+      height: 40px;
+      width:300px ;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .service {
+      background-color:#fff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 40%;
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  
 </style>
 <script>
-
-document.getElementById("menu-toggle").addEventListener("click", function () {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active"); // Toggle the 'active' class
-  });
   
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  const navLinks = document.getElementById("nav-links");
+  navLinks.classList.toggle("active");
+});
+
 </script>
